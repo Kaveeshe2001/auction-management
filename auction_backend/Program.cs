@@ -1,4 +1,7 @@
 
+using auction_backend.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace auction_backend
 {
     public class Program
@@ -13,6 +16,11 @@ namespace auction_backend
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<ApplicationDBContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
 
             var app = builder.Build();
 
