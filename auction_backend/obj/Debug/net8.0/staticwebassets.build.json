@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "JvrtCBoOczd9PHq/x+BcXoDm3bsOEaCnkY0SkriFQQY=",
+  "Source": "auction_backend",
+  "BasePath": "_content/auction_backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
