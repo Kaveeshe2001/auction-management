@@ -90,7 +90,7 @@ namespace auction_backend.Controllers
                 }
             } catch (Exception ex)
             {
-                return StatusCode(500, new { Message = "An unexpected internal error has occurred." });
+                return StatusCode(500, new { Error = ex.Message });
             }
         }
 

@@ -1,4 +1,3 @@
-
 using auction_backend.Data;
 using auction_backend.Interfaces;
 using auction_backend.Models;
@@ -12,7 +11,7 @@ namespace auction_backend
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args) // Changed to async Task
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +19,7 @@ namespace auction_backend
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowSpecificOrigins",
-                    builder => builder.WithOrigins("http://localhost:5018")
+                    builder => builder.WithOrigins("http://localhost:5173", "http://localhost:5173")
                                       .AllowAnyHeader()
                                       .AllowAnyMethod()
                                       .AllowCredentials());
@@ -101,6 +100,23 @@ namespace auction_backend
             builder.Services.AddScoped<ITokenService, auction_backend.Service.TokenService>();
 
             var app = builder.Build();
+
+            // =================== BEGIN: ROLE SEEDING ===================
+            using (var scope = app.Services.CreateScope())
+            {
+                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                var roles = new[] { "Admin", "User" };
+
+                foreach (var role in roles)
+                {
+                    if (!await roleManager.RoleExistsAsync(role))
+                    {
+                        await roleManager.CreateAsync(new IdentityRole(role));
+                    }
+                }
+            }
+            // =================== END: ROLE SEEDING =====================
 
 
             // Configure the HTTP request pipeline.
