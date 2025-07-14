@@ -1,0 +1,82 @@
+.search-form {
+ display: none;
+}
+
+@media (min-width: 1200px) {
+ .search-form {
+  display: flex;
+ }
+}
+
+
+.search-form .form-inner-search {
+ display: flex;
+ min-width: 468px;
+ position: relative;
+ line-height: 1;
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+ .search-form .form-inner-search {
+  min-width: 400px;
+ }
+}
+
+.search-form .form-inner-search input {
+ border: 1px solid hsla(0, 0%, 90%, .2);
+ border-radius: 5px 0 0 5px;
+ background-color: transparent;
+ height: 48px;
+ line-height: 1;
+ color: #fff;
+ width: 100%;
+ padding: 10px 20px;
+ outline: none;
+ font-size: 14px;
+}
+
+.search-form .form-inner-search .search-btn {
+ padding: 14px 33px;
+ background-color: #01aa85;
+ border-radius: 0 5px 5px 0;
+ border: none;
+ overflow: hidden;
+ z-index: 1;
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: .5s;
+ cursor: pointer;
+}
+
+.search-form .form-inner-search .search-btn::after {
+ position: absolute;
+ content: "";
+ display: block;
+ left: 15%;
+ right: -20%;
+ top: -4%;
+ height: 160%;
+ width: 160%;
+ bottom: 0;
+ border-radius: 2px;
+ background-color: #fff;
+ transform: skewX(45deg) scaleX(0);
+ z-index: -1;
+ transition: all .5s ease-out 0s;
+}
+
+.search-form .form-inner-search .search-btn:hover svg {
+ fill: #000;
+}
+
+@media (max-width: 1399px) {
+ .search-form .form-inner-search .search-btn {
+  padding: 15px 25px
+ }
+}
+
+.search-form .form-inner-search .search-btn:hover::after {
+ transform: skewX(45deg) scale(1)
+}
