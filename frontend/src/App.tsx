@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './components/Shared/Navbar/Navbar'
 import { UserProvider } from './providers/UserProvider';
 
@@ -10,6 +10,7 @@ function App() {
     <>
       <UserProvider>
         {showNavbar && <Navbar />}
+        <Outlet />
       </UserProvider>
     </>
   )
