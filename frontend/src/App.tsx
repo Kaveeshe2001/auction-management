@@ -3,6 +3,7 @@ import Navbar from './components/Shared/Navbar/Navbar'
 import { UserProvider } from './providers/UserProvider';
 import Footer from './components/Shared/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
+import FilterSidebars from './components/Shared/Sidebars/FilterSidebars';
 
 function App() {
   const location = useLocation();
@@ -12,6 +13,7 @@ function App() {
     <>
       <UserProvider>
         {showNavbar && <Navbar />}
+        <FilterSidebars />
         <Outlet />
         <ToastContainer />
         <Footer />
