@@ -5,6 +5,7 @@ import Search from '../../ui/Search/Search';
 import { useState } from 'react';
 import { RiUserFill } from '@remixicon/react';
 import PrimaryButton from '../../ui/PrimaryButton/PrimaryButton';
+import { useAuth } from '../../../context/useAuth';
 
 const Navbar = () => {
   const [activeSidebar, setActiveSidebar] = useState(false);
@@ -81,7 +82,7 @@ const Navbar = () => {
                 </a>
             </div>
             
-            <Sidebar />
+            <Sidebar active={activeSidebar}/>
             <div className='main-menu'>
                 <ul className='menu-list'>
                     <li>
