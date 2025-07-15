@@ -1,0 +1,87 @@
+.breadcrumb {
+ background-image: url(banner.png);
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: 50%;
+ padding-top: 150px;
+ margin-bottom: 120px;
+ position: relative;
+
+ .bread-col {
+  display: flex;
+  justify-content: center;
+ }
+
+ .banner-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 118px;
+  margin-bottom: 150px;
+
+ }
+
+ h1 {
+  color: var(--white-color);
+  font-family: var(--font-playfair);
+  font-style: italic;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  line-height: 1.2;
+ }
+
+ .breadcrumb-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  li {
+   color: hsla(0, 0%, 100%, .7);
+   font-family: var(--font-dmsans);
+   font-size: 15px;
+   font-weight: 400;
+   text-transform: capitalize;
+   position: relative;
+   padding-left: 26px;
+
+   a {
+    color: var(--primary-color);
+   }
+
+   a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+   }
+  }
+
+  li::before {
+   content: url('../../../assets/arrow.svg');
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+  }
+
+  li:first-child::before {
+   content: '';
+  }
+ }
+}
+
+@media (max-width: 1399px) {
+ .breadcrumb {
+  .banner-content {
+   padding-top: 100px;
+   margin-bottom: 120px;
+  }
+ }
+}
