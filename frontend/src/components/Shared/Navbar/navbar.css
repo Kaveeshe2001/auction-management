@@ -1,0 +1,147 @@
+@media (min-width: 1400px) and (max-width: 1599px) {
+ .navbar-wrapper {
+  padding: 0 40px;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  transition: all .8s ease-out 0s;
+  background-color: transparent;
+  border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+
+ }
+}
+
+.navbar-wrapper {
+ position: absolute;
+ width: 100%;
+}
+
+@media (max-width: 1699px) {
+ .header-topbar-area {
+  padding: 0 50px;
+ }
+}
+
+.header-topbar-area {
+ padding: 0 70px;
+}
+
+.top-nav {
+ padding: 12px 0;
+ border-bottom: 1px solid #eee;
+ position: relative;
+ width: 100%;
+ z-index: 999;
+}
+
+.top-nav .top-nav-wrap {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.top-nav-left .contact-area {
+ padding: 0;
+ margin: 0;
+ list-style: none;
+ display: flex;
+ align-items: center;
+ gap: 60px;
+}
+
+.top-nav-left .contact-area li {
+ position: relative;
+}
+
+.top-nav-left .contact-area li::before {
+ content: "";
+ width: 1px;
+ height: 20px;
+ background-color: rgba(34, 34, 34, .2);
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ left: -30px;
+}
+
+.top-nav-left .contact-area li:first-child::before {
+ display: none;
+}
+
+.top-nav-left .contact-area li a {
+ color: var(--white-color);
+ font-size: 15px;
+ font-weight: 500;
+ line-height: 20px;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ transition: .5s;
+}
+
+
+.top-nav-left .contact-area li a svg {
+ fill: var(--white-color);
+ transition: .5s
+}
+
+.top-nav-left .contact-area li a:hover {
+ color: #01aa85;
+}
+
+.top-nav-left .contact-area li a:hover svg {
+ fill: #01aa85;
+}
+
+.top-nav-right {
+ display: flex;
+ align-items: center;
+ gap: 40px;
+}
+
+.top-nav-right>ul {
+ padding: 0;
+ margin: 0;
+ list-style: none;
+ display: flex;
+ align-items: center;
+ gap: 20px
+}
+
+.top-nav-right>ul li a {
+ color: var(--white-color);
+ font-size: 12px;
+ font-weight: 600;
+ line-height: 1;
+ letter-spacing: .02em;
+ white-space: nowrap;
+ padding: 5px 20px;
+ border: 1px solid var(--primary-color);
+ border-radius: 50px;
+ transition: .5s;
+ text-transform: uppercase;
+}
+
+.top-nav-right>ul li a:hover {
+ background-color: #01aa85;
+ border-color: #01aa85;
+ color: #fff;
+}
+
+@media (max-width: 991px) {
+ .top-nav {
+  display: none
+ }
+}
+
+.header {
+ position: relative;
+ width: 100%;
+ z-index: 99;
+ transition: all .8s ease-out 0s;
+ background-color: transparent;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-wrap: nowrap;
+}
