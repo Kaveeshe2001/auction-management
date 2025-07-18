@@ -66,6 +66,7 @@ namespace auction_backend
 
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             builder.Services.AddScoped<IArtRepository, ArtRepository>();
+            builder.Services.AddScoped<IStoreRepository, StoreRepository>();
 
             builder.Services.AddIdentity<User, IdentityRole>(options =>
             {
