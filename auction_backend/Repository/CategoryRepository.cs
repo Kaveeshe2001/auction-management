@@ -1,4 +1,5 @@
 ﻿using auction_backend.Data;
+using auction_backend.Dto.Category;
 using auction_backend.Interfaces;
 using auction_backend.Models;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +30,7 @@ namespace auction_backend.Repository
             return await _context.Category.FirstOrDefaultAsync(x => x.Id == id);
 
         }
-        public async Task<Category?> UpdateAsync(int id, Category categoryModel)
+        public async Task<Category?> UpdateAsync(int id, UpdateCategoryDto categoryDto)
         {
             var existingCategory = await _context.Category.FindAsync(id);
 
@@ -38,9 +39,9 @@ namespace auction_backend.Repository
                 return null;
             }
 
-            existingCategory.CategoryName = categoryModel.CategoryName;
-            existingCategory.Image = categoryModel.Image;
-            existingCategory.Icon = categoryModel.Icon;
+            existingCategory.CategoryName = categoryDto.CategoryName;
+            existingCategory.Image = categoryDto.Image;
+            existingCategory.Icon = categoryDto.Icon;
 
             await _context.SaveChangesAsync();
             return existingCategory;

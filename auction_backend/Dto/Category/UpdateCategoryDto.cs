@@ -5,10 +5,12 @@ namespace auction_backend.Dto.Category
     public class UpdateCategoryDto
     {
         [Required]
-        public string CategoryName = string.Empty;
+        public string CategoryName { get; set; }
+
         [Required]
-        public string Image = string.Empty;
+        public string Image { get; set; }
+
         [Required]
-        public string Icon = string.Empty;
+        public string Icon { get; set; }
     }
 }

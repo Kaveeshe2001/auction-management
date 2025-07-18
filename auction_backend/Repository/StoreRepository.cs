@@ -33,7 +33,7 @@ namespace auction_backend.Repository
 
         public async Task<Store?> GetByUserIdAsync(string userId)
         {
-            return await _context.Store.FirstOrDefaultAsync(x => x.User.Id == userId);
+            return await _context.Store.FirstOrDefaultAsync(x => x.UserId == userId);
         }
 
         public async Task<Store?> UpdateAsync(int id, Store storeModel)
