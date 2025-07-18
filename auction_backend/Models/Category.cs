@@ -14,5 +14,6 @@ namespace auction_backend.Models
         public string Image { get; set; } = string.Empty ;
         [Required]
         public string Icon { get; set; } = string.Empty ;
+        public List<Art> Arts { get; set; } = new List<Art>();
     }
 }
