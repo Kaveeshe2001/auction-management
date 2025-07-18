@@ -19,7 +19,7 @@ namespace auction_backend.Data
             builder.Entity<Art>()
              .HasOne(a => a.Store)
              .WithMany(u => u.Arts)
-             .HasForeignKey(a => a.Store.Id)
+             .HasForeignKey(a => a.StoreId)
              .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Art>()
@@ -41,11 +41,13 @@ namespace auction_backend.Data
             {
                 new IdentityRole
                 {
+                    Id = "a18be9c0-aa65-4af8-bd17-00bd9344e575",
                     Name = "Admin",
                     NormalizedName = "ADMIN"
                 },
                 new IdentityRole
                 {
+                    Id = "a18be9c0-aa65-4af8-bd17-00bd9344e576",
                     Name = "User",
                     NormalizedName = "USER"
                 }

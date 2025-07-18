@@ -30,6 +30,10 @@ namespace auction_backend.Models
         public decimal Width { get; set; }
         public DateTime CreatedOn { get; set; } = DateTime.Now;
         [Required]
+        [ForeignKey("Store")]
+        public int StoreId { get; set; }
+        public Store Store { get; set; }
+        [Required]
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
         public Category Category { get; set; }
