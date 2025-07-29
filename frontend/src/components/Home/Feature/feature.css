@@ -1,0 +1,237 @@
+.home4-feature-section {
+ padding: 0 12%
+}
+
+@media (max-width: 1699px) {
+ .home4-feature-section {
+  padding: 0 10%
+ }
+}
+
+@media (min-width: 1400px) and (max-width:1599px) {
+ .home4-feature-section {
+  padding: 0 5%
+ }
+}
+
+@media (max-width: 1399px) {
+ .home4-feature-section {
+  padding: 0 2%
+ }
+}
+
+@media (max-width: 576px) {
+ .home4-feature-section {
+  padding: 0
+ }
+}
+
+.home4-feature-section .feature-wrapper {
+ margin-bottom: 100px
+}
+
+@media (max-width: 1199px) {
+ .home4-feature-section .feature-wrapper {
+  margin-bottom: 80px
+ }
+}
+
+@media (max-width: 767px) {
+ .home4-feature-section .feature-wrapper {
+  margin-bottom: 70px
+ }
+}
+
+.home4-feature-section .feature-wrapper .single-feature .icon {
+ margin-bottom: 25px
+}
+
+.home4-feature-section .feature-wrapper .single-feature .icon svg {
+ fill: var(--primary-color)
+}
+
+.home4-feature-section .feature-wrapper .single-feature .content h4 {
+ color: var(--title-color);
+ font-family: var(--font-dmsans);
+ font-size: 25px;
+ font-weight: 500;
+ line-height: 1.2;
+ margin-bottom: 15px
+}
+
+@media (min-width: 1200px) and (max-width:1399px) {
+ .home4-feature-section .feature-wrapper .single-feature .content h4 {
+  font-size: 22px
+ }
+}
+
+.home4-feature-section .feature-wrapper .single-feature .content p {
+ color: var(--paragraph-color);
+ font-family: var(--font-dmsans);
+ font-size: 15px;
+ font-weight: 400;
+ line-height: 28px;
+ letter-spacing: .03em;
+ margin-bottom: 0
+}
+
+.home4-feature-section .feature-wrapper .single-feature:hover .icon svg {
+ animation: bounceIn 1.2s linear
+}
+
+.home4-feature-section .feature-wrapper .divider {
+ position: relative
+}
+
+.home4-feature-section .feature-wrapper .divider .single-feature {
+ padding: 0 15px
+}
+
+@media (max-width: 991px) {
+ .home4-feature-section .feature-wrapper .divider .single-feature {
+  padding: 0
+ }
+}
+
+.home4-feature-section .feature-wrapper .divider:first-child .single-feature {
+ padding-left: 0
+}
+
+.home4-feature-section .feature-wrapper .divider:last-child .single-feature {
+ padding-right: 0
+}
+
+.home4-feature-section .feature-wrapper .divider:last-child:before {
+ display: none
+}
+
+.home4-feature-section .feature-wrapper .divider:before {
+ content: "";
+ width: 1px;
+ height: 120px;
+ background-color: rgba(var(--title-color-opc), .08);
+ position: absolute;
+ bottom: 0;
+ right: 0
+}
+
+@media (max-width: 991px) {
+ .home4-feature-section .feature-wrapper .divider:before {
+  display: none
+ }
+}
+
+.feature-banner {
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 10px;
+ padding: 14px 20px 14px 40px;
+ position: relative;
+ overflow: hidden
+}
+
+@media (max-width: 1399px) {
+ .feature-banner {
+  padding: 14px 20px 14px 25px
+ }
+}
+
+@media (min-width: 992px) and (max-width:1199px) {
+ .feature-banner {
+  padding: 14px 20px
+ }
+}
+
+@media (max-width: 576px) {
+ .feature-banner {
+  padding: 14px 15px
+ }
+}
+
+.feature-banner:before {
+ content: "";
+ background: hsla(0, 0%, 100%, .2);
+ position: absolute;
+ left: -75%;
+ top: 0;
+ height: 100%;
+ width: 50%;
+ transform: skewX(-25deg);
+ transform-origin: right;
+ transition: transform .4s ease-in
+}
+
+.feature-banner .banner-content span {
+ color: var(--primary-color);
+ font-family: var(--font-dmsans);
+ font-size: 16px;
+ font-weight: 400;
+ line-height: 1;
+ display: block;
+ margin-bottom: 10px
+}
+
+.feature-banner .banner-content h2 {
+ margin-bottom: 0
+}
+
+.feature-banner .banner-content h2 a {
+ color: var(--white-color);
+ font-family: var(--font-dmsans);
+ font-size: 38px;
+ font-weight: 800;
+ line-height: 1.1;
+ transition: .5s
+}
+
+@media (max-width: 1399px) {
+ .feature-banner .banner-content h2 a {
+  font-size: 33px
+ }
+}
+
+@media (min-width: 992px) and (max-width:1199px) {
+ .feature-banner .banner-content h2 a {
+  font-size: 32px
+ }
+}
+
+@media (max-width: 576px) {
+ .feature-banner .banner-content h2 a {
+  font-size: 28px
+ }
+}
+
+.feature-banner .banner-content h2 a:hover {
+ color: var(--primary-color)
+}
+
+.feature-banner .arrow svg {
+ fill: hsla(0, 0%, 100%, .1);
+ transition: .5s
+}
+
+@media (max-width: 576px) {
+ .feature-banner .arrow svg {
+  width: 70px
+ }
+}
+
+@keyframes shine {
+ to {
+  left: 125%
+ }
+}
+
+.feature-banner:hover:before {
+ transform-origin: left;
+ animation: shine .75s
+}
+
+.feature-banner:hover .arrow svg {
+ fill: hsla(0, 0%, 100%, .3)
+}
