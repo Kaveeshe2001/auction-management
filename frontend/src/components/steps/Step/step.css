@@ -1,0 +1,151 @@
+.step {
+    position: relative;
+   
+    span {
+     color: var(--white-color);
+     font-family: var(--font-dmsans);
+     font-size: 14px;
+     font-weight: 600;
+     line-height: 1;
+     display: inline-block;
+     padding: 7px 27px;
+     border-radius: 5px;
+     background-color: #6a6a6a;
+     margin-bottom: 16px;
+     transition: .5s
+    }
+   
+    h2 {
+     color: var(--title-color);
+     font-family: var(--font-dmsans);
+     font-size: 35px;
+     font-weight: 700;
+     line-height: 1.2;
+     margin-bottom: 15px
+    }
+   
+    p {
+     color: var(--paragraph-color);
+     font-family: var(--font-dmsans);
+     font-size: 17px;
+     font-weight: 400;
+     line-height: 1.9;
+     margin-bottom: 0
+    }
+   
+    .arrow {
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     border: 1px solid rgba(var(--primary-color2-opc), .3);
+     background-color: var(--white-color);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     bottom: 65px;
+     right: -28%;
+   
+     transition: .5s;
+   
+     svg {
+      fill: rgba(var(--primary-color2-opc), .3);
+      transition: .5s
+     }
+    }
+   
+    .arrow.two {
+     right: unset;
+     left: -28%
+    }
+   }
+   
+   
+   .step:hover {
+    span {
+     background-color: var(--primary-color)
+    }
+   
+    .arrow {
+     background-color: var(--primary-color);
+     border-color: var(--primary-color);
+   
+     svg {
+      fill: var(--white-color);
+      transform: rotate(-45deg);
+     }
+    }
+   }
+   
+   @media (min-width: 1200px) and (max-width:1399px) {
+    .step {
+     .arrow {
+      right: -29%;
+     }
+   
+     .arrow.two {
+      left: -29%
+     }
+    }
+   }
+   
+   @media (min-width: 992px) and (max-width:1199px) {
+    .step {
+     .arrow {
+      right: -31%;
+     }
+   
+     .arrow.two {
+      left: -31%
+     }
+    }
+   }
+   
+   @media (max-width: 1199px) {
+    .step {
+     h2 {
+      font-size: 32px
+     }
+    }
+   }
+   
+   @media (min-width: 768px) and (max-width:991px) {
+    .step {
+     .arrow {
+      right: -16px
+     }
+   
+     .arrow.two {
+      left: -43px;
+     }
+    }
+   }
+   
+   @media (max-width: 991px) {
+    .step {
+     h2 {
+      margin-bottom: 10px
+     }
+    }
+   }
+   
+   @media (max-width: 767px) {
+    .step {
+     .arrow {
+      display: none
+     }
+    }
+   }
+   
+   @media (max-width: 576px) {
+    step {
+     h2 {
+      font-size: 28px
+     }
+   
+     p {
+      font-size: 16px
+     }
+    }
+   }
+   
