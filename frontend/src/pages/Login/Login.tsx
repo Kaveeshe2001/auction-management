@@ -3,7 +3,7 @@ import { useAuth } from "../../context/useAuth"
 import Form from "../../components/ui/Form/Form";
 import { Col } from "react-bootstrap";
 import Input from "../../components/ui/Input/Input";
-import PrimaryButton from "../../components/ui/PrimaryButton/PrimaryButton";
+import PrimaryButton from "../../components/ui/Buttons/PrimaryButton/PrimaryButton";
 
 const Login = () => {
   const { loginUser } = useAuth();

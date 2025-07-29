@@ -4,7 +4,7 @@ import Sidebar from '../../ui/Sidebar/Sidebar';
 import Search from '../../ui/Search/Search';
 import { useState } from 'react';
 import { RiUserFill } from '@remixicon/react';
-import PrimaryButton from '../../ui/PrimaryButton/PrimaryButton';
+import PrimaryButton from '../../ui/Buttons/PrimaryButton/PrimaryButton';
 import { useAuth } from '../../../context/useAuth';
 
 const Navbar = () => {

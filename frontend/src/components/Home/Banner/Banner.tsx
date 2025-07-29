@@ -2,7 +2,7 @@ import './banner.css';
 import homeBanner from '../../../assets/home-banner.png';
 import bannerImage from '../../../assets/banner.jpg';
 import { Col, Row } from 'react-bootstrap';
-import PrimaryButton from '../../ui/PrimaryButton/PrimaryButton';
+import PrimaryButton from '../../ui/Buttons/PrimaryButton/PrimaryButton';
 import { RiArrowRightDownLine } from '@remixicon/react';
 
 const Banner = () => {
