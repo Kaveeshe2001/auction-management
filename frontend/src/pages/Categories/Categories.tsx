@@ -30,8 +30,8 @@ const Categories = () => {
         <Container>
             <Row className="row gy-5 row-cols-xl-5 row-cols-md-4 row-cols-sm-3 row-cols-2">
                 {categories?.map((category) => (
-                    <Col>
-                      <CategoryCard category={category} key={category.id} />
+                    <Col key={category.id}>
+                      <CategoryCard category={category} />
                     </Col>
                 ))}
             </Row>
