@@ -3,7 +3,7 @@ import logo from '../../../assets/logo-2.png';
 import Search from "../Search/Search";
 import './sidebar.css';
 import { RiUserFill } from "@remixicon/react";
-import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import PrimaryButton from "../Buttons/PrimaryButton/PrimaryButton";
 
 type SidebarProps = {
   active: boolean;
