@@ -1,0 +1,40 @@
+.steps {
+    position: relative;
+    padding-top: 50px;
+    margin-bottom: 25px;
+   }
+   
+   .steps::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(var(--primary-color2-opc), .2);
+    width: 1px;
+    height: 100%
+   }
+   
+   @media (max-width: 1199px) {
+    .steps {
+     padding-top: 30px;
+    }
+   }
+   
+   @media (max-width: 991px) {
+    .steps::before {
+     left: 48%
+    }
+   }
+   
+   @media (max-width: 767px) {
+    .steps {
+     padding-top: 0;
+     margin-bottom: 40px;
+    }
+   
+    .steps::before {
+     display: none;
+    }
+   }
+   
