@@ -1,0 +1,80 @@
+.inner-pagination-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap
+   }
+   
+   .inner-pagination-area .paginations {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px
+   }
+   
+   .inner-pagination-area .paginations .page-item button {
+    color: rgba(63, 68, 75, .5);
+    font-family: var(--font-dmsans);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid rgba(63, 68, 75, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s
+   }
+   
+   @media (max-width: 991px) {
+    .inner-pagination-area .paginations .page-item button {
+     width: 35px;
+     height: 35px;
+     font-size: 15px
+    }
+   }
+   
+   .inner-pagination-area .paginations .page-item button:hover,
+   .inner-pagination-area .paginations .page-item.active button {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color)
+   }
+   
+   .inner-pagination-area .paginations .page-item.paginations-button.disabled {
+    transform: rotate(130deg)
+   }
+   
+   .inner-pagination-area .paginations .page-item.paginations-button.disabled button svg {
+    fill: none;
+    stroke: rgba(63, 68, 75, .5);
+    transition: .5s
+   }
+   
+   .inner-pagination-area .paginations .page-item.paginations-button.disabled button:hover svg {
+    stroke: var(--white-color);
+    transform: rotate(26deg)
+   }
+   
+   .inner-pagination-area .paginations .page-item.paginations-button button svg {
+    fill: none;
+    stroke: rgba(63, 68, 75, .5);
+    transition: .5s
+   }
+   
+   .inner-pagination-area .paginations .page-item.paginations-button button:hover svg {
+    stroke: var(--white-color);
+    transform: rotate(-30deg)
+   }
+   
+   .inner-pagination-area.two .paginations .page-item button {
+    width: 35px;
+    height: 35px;
+    font-size: 14px
+   }
