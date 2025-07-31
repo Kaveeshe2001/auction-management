@@ -7,6 +7,8 @@ import Login from "../pages/Login/Login";
 import HowtoSell from "../pages/HowtoSell/HowtoSell";
 import ProtectedRoute from "./ProtectedRoute";
 import CreateStore from "../pages/CreateStore/CreateStore";
+import Sellers from "../pages/Sellers/Sellers";
+import SellerDetails from "../pages/Sellers/SellerDetails";
 
 export const router = createBrowserRouter([
     {
@@ -17,6 +19,8 @@ export const router = createBrowserRouter([
             { path: 'how-to-sell', element: <HowtoSell /> },
             { path: 'login', element: <Login /> },
             { path: 'signup', element: <Signup /> },
+            { path: 'sellers', element: <Sellers /> },
+            { path: 'seller-details', element: <SellerDetails /> },
             { path: 'categories', element: <Categories /> },
             {
                 path: 'create-store',
