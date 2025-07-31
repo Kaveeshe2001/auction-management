@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import bannerImage from '../../../assets/banner.jpg';
 import './breadcrumb.css';
 
 type BreadcrumbProps = {
@@ -7,7 +8,7 @@ type BreadcrumbProps = {
 
 const Breadcrumb = ({ children }: BreadcrumbProps) => {
     return (
-        <div className="breadcrumb">
+        <div className="breadcrumb" style={{ backgroundImage: `url(${bannerImage})` }}>
             <Container>
                 <Row>
                     <Col lg={12} className="bread-col">
