@@ -5,6 +5,8 @@ import Categories from "../pages/Categories/Categories";
 import Signup from "../pages/Signup/Signup";
 import Login from "../pages/Login/Login";
 import HowtoSell from "../pages/HowtoSell/HowtoSell";
+import ProtectedRoute from "./ProtectedRoute";
+import CreateStore from "../pages/CreateStore/CreateStore";
 
 export const router = createBrowserRouter([
     {
@@ -16,6 +18,14 @@ export const router = createBrowserRouter([
             { path: 'login', element: <Login /> },
             { path: 'signup', element: <Signup /> },
             { path: 'categories', element: <Categories /> },
-        ]
-    }
-])
+            {
+                path: 'create-store',
+                element: (
+                    <ProtectedRoute>
+                        <CreateStore />
+                    </ProtectedRoute>
+                ),
+            },
+        ],
+    },
+]);
