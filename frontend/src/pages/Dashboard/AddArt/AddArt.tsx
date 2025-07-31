@@ -46,11 +46,11 @@ const AddArt = () => {
     const formData = new FormData();
 
     formData.append('file', acceptedFiles[0]);
-    formData.append('upload_preset', 'aesthetic-auction');
+    formData.append('upload_preset', 'auction_mng');
     formData.append('api_key', import.meta.env.VITE_CLOUDNARY_API_KEY);
 
     const result = await fetch(
-        'https://api.cloudinary.com/v1_1/dsseoknzm/image/upload',
+        'https://api.cloudinary.com/v1_1/dq7iyymwz/image/upload',
         {
             method: 'POST',
             body: formData,

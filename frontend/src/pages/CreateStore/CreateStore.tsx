@@ -57,19 +57,21 @@ const CreateStore = () => {
         const formDataProfile = new FormData();
 
         formDataCover.append('file', acceptedCoverFiles[0]);
-        formDataCover.append('upload_preset', 'aesthetic-auction');
+        formDataCover.append('upload_preset', 'auction_mng');
         formDataCover.append('api_key', import.meta.env.VITE_CLOUDNARY_API_KEY);
 
         formDataProfile.append('file', acceptedProfileFiles[0]);
-        formDataProfile.append('upload_preset', 'aesthetic-auction');
+        formDataProfile.append('upload_preset', 'auction_mng');
         formDataProfile.append('api_key', import.meta.env.VITE_CLOUDNARY_API_KEY);
 
-        const resultCover = await fetch('', {
+        const cloudinaryUrl = import.meta.env.VITE_CLOUDNARY_URL;
+
+        const resultCover = await fetch(cloudinaryUrl, {
             method: 'POST',
             body: formDataCover,
         }).then((r) => r.json());
 
-        const resultProfile = await fetch('', {
+        const resultProfile = await fetch(cloudinaryUrl, {
             method: 'POST',
             body: formDataProfile,
         }).then((r) => r.json());
