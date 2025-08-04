@@ -59,5 +59,6 @@ namespace auction_backend.Data
         public DbSet<Store> Store { get; set; }
         public DbSet<Art> Art { get; set; }
         public DbSet<Auction> Auction { get; set; }
+        public DbSet<Bid> Bid { get; set; } 
     }
 }
