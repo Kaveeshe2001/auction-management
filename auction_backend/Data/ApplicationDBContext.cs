@@ -28,6 +28,20 @@ namespace auction_backend.Data
              .HasForeignKey(a => a.CategoryId)
              .OnDelete(DeleteBehavior.Restrict);
 
+            //Auction Model Relations
+            builder.Entity<Auction>()
+                .HasOne(a => a.Art)
+                .WithOne(u => u.Auction)
+                .HasForeignKey<Auction>(a => a.ArtId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            //Bide Model Relations
+            builder.Entity<Bid>()
+                .HasOne(a => a.Auction)
+                .WithMany(u => u.Bids)
+                .HasForeignKey(a => a.AuctionId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             //Store Model Relations
             builder.Entity<Store>(x => x.HasKey(p => new { p.Id }));
 
