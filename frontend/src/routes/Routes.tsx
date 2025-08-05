@@ -9,6 +9,8 @@ import ProtectedRoute from "./ProtectedRoute";
 import CreateStore from "../pages/CreateStore/CreateStore";
 import Sellers from "../pages/Sellers/Sellers";
 import SellerDetails from "../pages/Sellers/SellerDetails";
+import Auctions from "../pages/Auctions/Auctions";
+import Profile from "../pages/Profile/Profile";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +24,15 @@ export const router = createBrowserRouter([
             { path: 'sellers', element: <Sellers /> },
             { path: 'seller-details', element: <SellerDetails /> },
             { path: 'categories', element: <Categories /> },
+            { path: 'auctions', element: <Auctions /> },
+            {
+                path: 'dashboard',
+                element: (
+                    <ProtectedRoute>
+                        <Profile />
+                    </ProtectedRoute>
+                ),
+            },
             {
                 path: 'create-store',
                 element: (

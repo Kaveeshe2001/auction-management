@@ -11,6 +11,9 @@ import BidButton from '../../components/ui/Buttons/BidButton/BidButton';
 import DashboardSidebar from '../../components/Shared/Sidebars/DashboardSidebar';
 import { sellerDashboard } from '../../data/SellerDashboard';
 import { buyerDashboard } from '../../data/buyerDashboard';
+import MyAuction from '../Dashboard/MyAuction/MyAuction';
+import StartAuction from '../Dashboard/StartAuction/StartAuction';
+import Auctions from '../Dashboard/Auctions/Auctions';
 
 const Profile = () => {
   const { logout } = useAuth();
@@ -28,6 +31,8 @@ const Profile = () => {
         switch (snap.dashboardSelected) {
             case 'Dashboard':
                 return <Dashboard />;
+            case 'MyAuction':
+                return <MyAuction />;
             case 'Logout':
                 handleLogout();
                 break;
@@ -42,6 +47,10 @@ const Profile = () => {
                 return <Arts />;
             case 'AddArt':
                 return <AddArt />;
+            case 'Auctions':
+                return <Auctions />;
+            case 'StartAuction':
+                return <StartAuction />;
             default:
                 return <Dashboard />;
         }
