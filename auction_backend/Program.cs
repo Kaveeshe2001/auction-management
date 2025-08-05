@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Stripe;
 
 namespace auction_backend
 {
@@ -103,6 +104,8 @@ namespace auction_backend
 
             });
 
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
             builder.Services.AddScoped<ITokenService, auction_backend.Service.TokenService>();
 
             var app = builder.Build();
@@ -124,6 +127,8 @@ namespace auction_backend
             app.UseAuthorization();
 
             app.MapControllers();
+
+            StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
 
             app.Run();
         }

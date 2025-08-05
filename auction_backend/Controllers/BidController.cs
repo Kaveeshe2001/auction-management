@@ -64,6 +64,21 @@ namespace auction_backend.Controllers
             var auctionId = bidDto.AuctionId;
 
             //Stripe code
+            var options = new PaymentIntentCreateOptions
+            {
+                Amount = (long?)amount,
+                Currency = "usd",
+                ReceiptEmail = userEmail,
+                PaymentMethodTypes = new List<string> { "card" },
+                PaymentMethodOptions = new PaymentIntentPaymentMethodOptionsOptions
+                {
+                    Card = new PaymentIntentPaymentMethodOptionsCardOptions
+                    {
+                        CaptureMethod = "manual",
+                    },
+                },
+
+            };
 
             var auction = await _context.Auction
                 .Include(a => a.Art)
@@ -90,7 +105,8 @@ namespace auction_backend.Controllers
 
             try
             {
-                //stripe
+                var service = new PaymentIntentService();
+                PaymentIntent intent = await service.CreateAsync(options);
                 await _artRepo.UpdateCurrentMarketPriceAsync(artId, amount);
                 var bidModel = bidDto.ToPlaceBidDto(userId, "SJhdjshdk");
                 await _bidRepo.PlaceBidAsync(bidModel);
