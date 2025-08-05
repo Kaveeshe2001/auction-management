@@ -159,7 +159,7 @@ namespace auction_backend.Controllers
             return Ok(auctionModel.ToAuctionDto());
         }
 
-        [HttpGet]
+        [HttpGet("latest")]
         public async Task<IActionResult> GetLatest([FromQuery] int? limit = null)
         {
             var auctions = await _auctionRepo.GetLatestAsync(limit);
