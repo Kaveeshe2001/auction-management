@@ -125,7 +125,8 @@ namespace auction_backend.Controllers
         [Authorize]
         public async Task<IActionResult> CapturePayment(CapturePaymentDto captureDto)
         {
-            var bid = await _context.Bid.FindAsync(captureDto.PaymentIntentId);
+            var bid = await _context.Bid
+                .FirstOrDefaultAsync(b => b.PaymentIntentId == captureDto.PaymentIntentId);
 
             if (bid == null)
             {
