@@ -14,6 +14,6 @@ namespace auction_backend.Models
         public string Email { get; set; } = string.Empty;
         [Required]
         public string Subject { get; set; } = string.Empty;
-        public string Messgae { get; set; } = string.Empty;
+        public string Message { get; set; } = string.Empty;
     }
 }

@@ -10,6 +10,6 @@ namespace auction_backend.Dto.ContactUs
         public string Email { get; set; } = string.Empty;
         [Required]
         public string Subject { get; set; } = string.Empty;
-        public string Body { get; set; } = string.Empty;
+        public string Message { get; set; } = string.Empty;
     }
 }
