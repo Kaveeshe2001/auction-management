@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BidGet, BidPost } from "../models/Bid";
+import type { BidGet, BidPost } from "../models/Bid";
 import { handleError } from "../handlers/ErrorHandler";
 
 const api = 'http://localhost:5018/auction_backend/bid';
@@ -29,7 +29,7 @@ export const placeBidApi = async (auctionId: number, amount: number) => {
 
 export const getBidsByAuctionApi = async (auctionId: number) => {
     try {
-        const data = await axios.get<BidGet>(`${api}/auction/${auctionId}`);
+        const data = await axios.get<BidGet[]>(`${api}/auction/${auctionId}`);
         return data;
     } catch (error) {
         handleError(error);

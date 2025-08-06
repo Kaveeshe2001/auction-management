@@ -13,6 +13,18 @@ dist-ssr
 *.local
 .vs/
 
+# Ignore compiled binaries and build artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Ignore sensitive config files
+appsettings.json
+appsettings.Development.json
+auction_backend/appsettings.json
+auction_backend/appsettings.Development.json
 
 # Editor directories and files
 .vscode/*

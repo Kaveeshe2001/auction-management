@@ -1,261 +1,261 @@
 .auction-card {
-    border-radius: 5px;
-    padding: 0;
-    border: 1px solid rgba(var(--border-color-opc), .6);
-    background-color: var(--white-color);
-   
-    .auction-card-wrapper {
-     position: relative;
-    }
-   
-    .card-image {
-     border-radius: 5px 5px 0 0;
-     position: relative;
-     overflow: hidden;
+ border-radius: 5px;
+ padding: 0;
+ border: 1px solid rgba(var(--border-color-opc), .6);
+ background-color: var(--white-color);
+
+ .auction-card-wrapper {
+  position: relative;
+ }
+
+ .card-image {
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+
+  img {
+   width: 100%;
+   transition: all .5s ease-out
+  }
+ }
+
+ .card-image::after {
+  position: absolute;
+  width: 200%;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  background-color: hsla(0, 0%, 100%, .3);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  content: "";
+  z-index: 1;
+ }
+
+ .batch {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  span {
+   border-radius: 15px;
+   padding: 6px 12px;
+  }
+
+  .live,
+  .upcoming,
+  .completed {
+   color: var(--white-color);
+   font-family: var(--font-dmsans);
+   font-size: 12px;
+   font-weight: 700;
+   line-height: 1;
+   display: inline-flex;
+   align-items: center;
+   gap: 4px;
+   border-radius: 3px;
+   padding: 6px 10px;
+   margin-bottom: 5px;
+  }
+
+  .live {
+   background-color: #b90101;
+  }
+
+  .upcoming {
+   background-color: #2092e4;
+  }
+
+  .completed {
+   background-color: #13fc03;
+  }
+ }
+
+ .code-no {
+  opacity: 1;
+  transition: .5s;
+
+  .code {
+   border-radius: 15px;
+   padding: 6px 12px;
+   background-color: #747474;
+   font-size: 11px;
+   color: var(--white-color);
+   font-weight: 600;
+  }
+ }
+
+ .view-and-favorite-area {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  transform-origin: right;
+  opacity: 0;
+  transition: .5s;
+  z-index: 1;
+
+  li {
+   margin-bottom: 8px;
+  }
+
+  li a {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--white-color);
+   transition: .5s;
+   color: #000;
+  }
+
+  li a:hover {
+   background-color: var(--primary-color2)
+  }
+
+  li a:hover svg {
+   fill: var(--white-color)
+  }
+ }
+
+ .countdown-timer {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+  width: 262px;
+  height: 53px;
+  border-radius: 105px;
+  line-height: 1;
+  border: 1px solid rgba(var(--title-color-opc), .2);
+  padding: 0 30px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  opacity: 1;
+
+  ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 12px;
+
+   li {
+    line-height: 1;
+    color: var(--title-color);
+    text-align: center;
+    font-family: var(--font-dmsans);
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+
+    span {
      display: block;
-     width: 100%;
-   
-     img {
-      width: 100%;
-      transition: all .5s ease-out
-     }
-    }
-   
-    .card-image::after {
-     position: absolute;
-     width: 200%;
-     height: 0;
-     left: 50%;
-     top: 50%;
-     background-color: hsla(0, 0%, 100%, .3);
-     transform: translate(-50%, -50%) rotate(-45deg);
-     content: "";
-     z-index: 1;
-    }
-   
-    .batch {
-     position: absolute;
-     top: 10px;
-     left: 10px;
-   
-     span {
-      border-radius: 15px;
-      padding: 6px 12px;
-     }
-   
-     .live,
-     .upcoming,
-     .completed {
-      color: var(--white-color);
-      font-family: var(--font-dmsans);
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      border-radius: 3px;
-      padding: 6px 10px;
-      margin-bottom: 5px;
-     }
-   
-     .live {
-      background-color: #b90101;
-     }
-   
-     .upcoming {
-      background-color: #2092e4;
-     }
-   
-     .completed {
-      background-color: #13fc03;
-     }
-    }
-   
-    .code-no {
-     opacity: 1;
-     transition: .5s;
-   
-     .code {
-      border-radius: 15px;
-      padding: 6px 12px;
-      background-color: #747474;
-      font-size: 11px;
-      color: var(--white-color);
-      font-weight: 600;
-     }
-    }
-   
-    .view-and-favorite-area {
-     padding: 0;
-     margin: 0;
-     list-style: none;
-     position: absolute;
-     top: 12px;
-     right: 10px;
-     transform-origin: right;
-     opacity: 0;
-     transition: .5s;
-     z-index: 1;
-   
-     li {
-      margin-bottom: 8px;
-     }
-   
-     li a {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--white-color);
-      transition: .5s;
-      color: #000;
-     }
-   
-     li a:hover {
-      background-color: var(--primary-color2)
-     }
-   
-     li a:hover svg {
-      fill: var(--white-color)
-     }
-    }
-   
-    .countdown-timer {
-     position: absolute;
-     left: 50%;
-     bottom: 15px;
-     transform: translateX(-50%);
-     width: 262px;
-     height: 53px;
-     border-radius: 105px;
+     color: var(--paragraph-color);
+     font-family: var(--font-dmsans);
+     font-size: 12px;
+     font-weight: 500;
      line-height: 1;
-     border: 1px solid rgba(var(--title-color-opc), .2);
-     padding: 0 30px;
-     background: #fff;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     transition: .5s;
-     opacity: 1;
-   
-     ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-   
-      li {
-       line-height: 1;
-       color: var(--title-color);
-       text-align: center;
-       font-family: var(--font-dmsans);
-       font-size: 18px;
-       font-weight: 700;
-       display: block;
-   
-       span {
-        display: block;
-        color: var(--paragraph-color);
-        font-family: var(--font-dmsans);
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 1;
-        padding-top: 3px;
-       }
-      }
-     }
-    }
-   
-    .auction-card-content {
-     padding: 20px 15px;
-   
-     h6 {
-      margin-bottom: 15px;
-   
-      a {
-       color: var(--title-color);
-       font-family: var(--font-dmsans);
-       font-size: 18px;
-       font-weight: 600;
-       line-height: 25px;
-       transition: .5s;
-      }
-   
-      a:hover {
-       color: var(--primary-color);
-      }
-     }
-   
-     .price-area {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 15px;
-   
-      .price {
-       span {
-        color: var(--paragraph-color);
-        font-family: var(--font-dmsans);
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 22px;
-        display: block;
-       }
-   
-       strong {
-        color: var(--title-color);
-        font-family: var(--font-dmsans);
-        font-size: 22px;
-        font-weight: 700;
-        line-height: 22px;
-       }
-      }
-     }
+     padding-top: 3px;
     }
    }
-   
-   .auction-card:hover .bid-btn {
-    background-color: var(--primary-color)
+  }
+ }
+
+ .auction-card-content {
+  padding: 20px 15px;
+
+  h6 {
+   margin-bottom: 15px;
+
+   a {
+    color: var(--title-color);
+    font-family: var(--font-dmsans);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    transition: .5s;
    }
-   
-   .auction-card:hover .card-image img {
-    transform: scale(1.1)
+
+   a:hover {
+    color: var(--primary-color);
    }
-   
-   .auction-card:hover .card-image::after {
-    height: 250%;
-    transition: all .6s linear;
-    background-color: transparent
-   }
-   
-   .auction-card:hover .countdown-timer {
-    opacity: 0;
-   }
-   
-   .auction-card:hover .view-and-favorite-area {
-    animation: fadeInDown .45s linear;
-    opacity: 1
-   }
-   
-   @keyframes fadeInDown {
-    0% {
-     opacity: 0;
-     transform: translateY(-20px)
+  }
+
+  .price-area {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 15px;
+
+   .price {
+    span {
+     color: var(--paragraph-color);
+     font-family: var(--font-dmsans);
+     font-size: 12px;
+     font-weight: 400;
+     line-height: 22px;
+     display: block;
     }
-   
-    to {
-     opacity: 1;
-     transform: translateY(0)
+
+    strong {
+     color: var(--title-color);
+     font-family: var(--font-dmsans);
+     font-size: 22px;
+     font-weight: 700;
+     line-height: 22px;
     }
    }
-   
-   .fadeInDown {
-    animation-name: fadeInDown
-   }
+  }
+ }
+}
+
+.auction-card:hover .bid-btn {
+ background-color: var(--primary-color)
+}
+
+.auction-card:hover .card-image img {
+ transform: scale(1.1)
+}
+
+.auction-card:hover .card-image::after {
+ height: 250%;
+ transition: all .6s linear;
+ background-color: transparent
+}
+
+.auction-card:hover .countdown-timer {
+ opacity: 0;
+}
+
+.auction-card:hover .view-and-favorite-area {
+ animation: fadeInDown .45s linear;
+ opacity: 1
+}
+
+@keyframes fadeInDown {
+ 0% {
+  opacity: 0;
+  transform: translateY(-20px)
+ }
+
+ to {
+  opacity: 1;
+  transform: translateY(0)
+ }
+}
+
+.fadeInDown {
+ animation-name: fadeInDown
+}
