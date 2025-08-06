@@ -50,7 +50,6 @@ D:\My project\auction-management\auction_backend\bin\Debug\net8.0\Microsoft.Iden
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\Microsoft.OpenApi.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-D:\My project\auction-management\auction_backend\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\Mono.TextTemplating.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
@@ -66,17 +65,14 @@ D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Composi
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Composition.TypedParts.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
-D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Drawing.Common.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Formats.Asn1.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.IO.Pipelines.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Memory.Data.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Runtime.Caching.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Security.Permissions.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Text.Json.dll
-D:\My project\auction-management\auction_backend\bin\Debug\net8.0\System.Windows.Extensions.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -148,13 +144,8 @@ D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\win-a
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-D:\My project\auction-management\auction_backend\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\My project\auction-management\auction_backend\obj\Debug\net8.0\auction_backend.csproj.AssemblyReference.cache
 D:\My project\auction-management\auction_backend\obj\Debug\net8.0\auction_backend.GeneratedMSBuildEditorConfig.editorconfig
 D:\My project\auction-management\auction_backend\obj\Debug\net8.0\auction_backend.AssemblyInfoInputs.cache
@@ -177,3 +168,4 @@ D:\My project\auction-management\auction_backend\obj\Debug\net8.0\refint\auction
 D:\My project\auction-management\auction_backend\obj\Debug\net8.0\auction_backend.pdb
 D:\My project\auction-management\auction_backend\obj\Debug\net8.0\auction_backend.genruntimeconfig.cache
 D:\My project\auction-management\auction_backend\obj\Debug\net8.0\ref\auction_backend.dll
+D:\My project\auction-management\auction_backend\bin\Debug\net8.0\Stripe.net.dll
