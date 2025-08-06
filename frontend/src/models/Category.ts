@@ -4,3 +4,9 @@ export type CategoryGet = {
     image: string;
     icon: string;
 }
+
+export type CategoryPost = {
+    categoryName: string;
+    image: string;
+    icon: string;
+}
