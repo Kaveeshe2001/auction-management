@@ -92,7 +92,7 @@ const Navbar = () => {
                       <a href='/auctions'>Auction</a>
                     </li>
                     <li>
-                      <a href=''>Contact</a>
+                      <a href='/contact'>Contact</a>
                     </li>
                     {hasStore === '1' && (
                       <li>

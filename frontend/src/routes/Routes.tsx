@@ -14,6 +14,7 @@ import Profile from "../pages/Profile/Profile";
 import { Elements } from "@stripe/react-stripe-js";
 import AuctionDetails from "../pages/Auctions/AuctionDetails";
 import { loadStripe } from "@stripe/stripe-js";
+import Contact from "../pages/Contact/Contact";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
@@ -30,6 +31,7 @@ export const router = createBrowserRouter([
             { path: 'seller-details', element: <SellerDetails /> },
             { path: 'categories', element: <Categories /> },
             { path: 'auctions', element: <Auctions /> },
+            { path: 'contact', element: <Contact /> },
             {
                 path: 'auction-details',
                 element: (
