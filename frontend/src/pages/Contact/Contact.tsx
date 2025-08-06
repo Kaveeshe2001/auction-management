@@ -5,6 +5,8 @@ import Input from "../../components/ui/Input/Input";
 import { useState } from "react";
 import Textarea from "../../components/ui/Textarea/Textarea";
 import PrimaryButton from "../../components/ui/Buttons/PrimaryButton/PrimaryButton";
+import { contactPostAPI } from "../../services/ContactServices";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -31,7 +33,22 @@ const Contact = () => {
 
     if (Object.keys(newErrors).length > 0) {
         setErrors(newErrors);
-    } 
+    } else {
+        contactPostAPI(
+            name,
+            email,
+            subject,
+            message,
+        )
+        .then((res) => {
+            if (res) {
+                toast.success('Contact Details Added Successfully')
+            }
+        })
+        .catch((e) => {
+            toast.warning(e);
+        })
+    }
   }
 
   return (
