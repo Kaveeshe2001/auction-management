@@ -1,10 +1,15 @@
-import { RiArtboard2Line, RiArtboardLine, RiAuctionLine, RiDashboardHorizontalLine, RiLogoutBoxRLine } from "@remixicon/react";
+import { RiArtboard2Line, RiArtboardLine, RiAuctionLine, RiDashboardHorizontalLine, RiLogoutBoxRLine, RiTaskLine } from "@remixicon/react";
 
 export const sellerDashboard = [
   {
     item: 'Dashboard',
     component: 'Dashboard',
     icon: RiDashboardHorizontalLine,
+  },
+  {
+    item: 'Add Category',
+    component: 'AddCategory',
+    icon: RiTaskLine,
   },
   {
     item: 'My Arts',

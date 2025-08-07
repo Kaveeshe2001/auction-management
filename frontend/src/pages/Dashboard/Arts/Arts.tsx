@@ -17,14 +17,18 @@ const Arts = () => {
   const storeId = localStorage.getItem('storeId');
 
   useEffect(() => {
-    if(storeId) {
-        getArtsByStore(
-            parseInt(storeId),
-            pageNumber,
-            pageSize,
-            setArts,
-            setTotalPages
-        );
+    console.log("Current storeId from localStorage:", storeId); // <-- ADD THIS
+    if (storeId) {
+      console.log("Fetching arts for storeId:", storeId); // <-- ADD THIS
+      getArtsByStore(
+        parseInt(storeId),
+        pageNumber,
+        pageSize,
+        setArts,
+        setTotalPages
+      );
+    } else {
+      console.error("No storeId found in localStorage. Cannot fetch arts."); // <-- ADD THIS
     }
   }, [storeId, pageNumber, pageSize]);
 
@@ -38,7 +42,7 @@ const Arts = () => {
 
       <Row>
         {arts?.map((art) => (
-            <Col xl={4} lg={6}>
+            <Col key={art.id} xl={4} lg={6}>
                 <AuctionCard art={art} />
             </Col>
         ))}

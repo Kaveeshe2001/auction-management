@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import type { UserProfile } from '../models/User';
+import { storeGetByUser } from '../services/StoreServices';
 
 type UserContextType = {
     user: UserProfile | null;
@@ -90,13 +91,19 @@ export const UserProvider = ({children}: Props) => {
                   phoneNumber: res?.data.phoneNumber,
                 };
                 localStorage.setItem('user', JSON.stringify(userObj));
-                //const store = await storeGetByUser(res?.data.id);
+                
+                try {
+                    const store = await storeGetByUser(res?.data.id);
 
-                /*if (store?.data) {
-                    localStorage.setItem('storeId', JSON.stringify(store.data.id));
-                } else {
+                    if (store && store?.data) {
+                        localStorage.setItem('storeId', JSON.stringify(store.data.id));
+                    } else {
+                        localStorage.setItem('storeId', '0');
+                    }
+                } catch (error) {
+                    console.warn("User does not have a store, setting storeId to '0'.");
                     localStorage.setItem('storeId', '0');
-                }*/
+                }
 
                 setToken(res?.data.token);
                 setUser(userObj!);

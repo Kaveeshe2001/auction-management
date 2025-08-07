@@ -58,7 +58,13 @@ export const storeGetByIdApi = async (id: string) => {
 
 export const storeGetByUser = async (id: string) => {
     try {
-        const data = await axios.get<StoreGet>(`${api}/user/${id}`);
+        const token = localStorage.getItem('token');
+        
+        const data = await axios.get<StoreGet>(`${api}/user/${id}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
+        });
         return data;
     } catch (error) {
         handleError(error);

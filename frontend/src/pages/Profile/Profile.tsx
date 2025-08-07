@@ -14,6 +14,7 @@ import { buyerDashboard } from '../../data/buyerDashboard';
 import MyAuction from '../Dashboard/MyAuction/MyAuction';
 import StartAuction from '../Dashboard/StartAuction/StartAuction';
 import Auctions from '../Dashboard/Auctions/Auctions';
+import AddCategory from '../Dashboard/AddCategory/AddCategory';
 
 const Profile = () => {
   const { logout } = useAuth();
@@ -43,6 +44,8 @@ const Profile = () => {
         switch (snap.dashboardSelected) {
             case 'Dashboard':
                 return <Dashboard />;
+            case 'AddCategory':
+                return <AddCategory />;
             case 'MyArts':
                 return <Arts />;
             case 'AddArt':

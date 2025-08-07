@@ -60,3 +60,8 @@
 .category-card4.two:hover {
  background-color: #ffe8de
 }
+
+.category-img {
+    width: 200px;
+    height: auto;
+}
