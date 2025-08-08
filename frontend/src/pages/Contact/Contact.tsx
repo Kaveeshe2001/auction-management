@@ -67,7 +67,15 @@ const Contact = () => {
       <Container>
         <Row style={{ width: '100%' }} className="mb-20">
             <Col md={3}>
-                <h1>Contact</h1>
+                <div className="mb-20">
+                    <h4>Contact Us</h4>
+                </div>
+                <div className="content">
+                    <div className="contact-details">
+                        <h6>+9476 562 3698</h6>
+                        <h6>Homagama, Sri Lanka</h6>
+                    </div>
+                </div>
             </Col>
             <Col md={9}>
                 <Row style={{ width: '100%' }}>

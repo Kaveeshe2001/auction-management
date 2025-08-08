@@ -3,6 +3,8 @@
  padding: 0;
  border: 1px solid rgba(var(--border-color-opc), .6);
  background-color: var(--white-color);
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.50);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
 
  .auction-card-wrapper {
   position: relative;

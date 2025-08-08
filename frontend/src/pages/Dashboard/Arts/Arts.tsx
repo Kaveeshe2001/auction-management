@@ -17,9 +17,9 @@ const Arts = () => {
   const storeId = localStorage.getItem('storeId');
 
   useEffect(() => {
-    console.log("Current storeId from localStorage:", storeId); // <-- ADD THIS
+    console.log("Current storeId from localStorage:", storeId);
     if (storeId) {
-      console.log("Fetching arts for storeId:", storeId); // <-- ADD THIS
+      console.log("Fetching arts for storeId:", storeId); 
       getArtsByStore(
         parseInt(storeId),
         pageNumber,
@@ -28,7 +28,7 @@ const Arts = () => {
         setTotalPages
       );
     } else {
-      console.error("No storeId found in localStorage. Cannot fetch arts."); // <-- ADD THIS
+      console.error("No storeId found in localStorage. Cannot fetch arts."); 
     }
   }, [storeId, pageNumber, pageSize]);
 
